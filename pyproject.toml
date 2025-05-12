@@ -1,0 +1,11 @@
+[project]
+name = "lenscribe"
+version = "0.1.0"
+description = "Lenscribe is a Python-powered app that understands and describes images using natural language. From generating captions to answering visual questions, it brings vision and language together for smarter, more intuitive interaction."
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "ruff>=0.11.9",
+    "streamlit>=1.45.1",
+    "transformers>=4.51.3",
+]
