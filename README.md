@@ -1,2 +1,2 @@
 # lenscribe
-Lenscribe is a Python-powered app that understands and describes images using natural language. From generating captions to answering visual questions, it brings vision and language together for smarter, more intuitive interaction.
+Lenscribe is an intelligent vision-language application powered by Python that bridges the gap between images and natural language. Leveraging state-of-the-art deep learning models, Lenscribe can understand, describe, and extract insights from visual content in real-time. Whether it's captioning images, answering questions about scenes, or generating contextual text based on visual inputs, Lenscribe empowers users with seamless multimodal interaction.
