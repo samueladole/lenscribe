@@ -1,6 +1,11 @@
 from typing import Protocol
 from PIL import Image
-from transformers import BlipProcessor, BlipForQuestionAnswering
+from transformers import (
+    BlipProcessor,
+    BlipForQuestionAnswering,
+    ViltProcessor,
+    ViltForQuestionAnswering
+)
 import torch
 
 def load_image(image_path: str) -> Image.Image:
@@ -58,3 +63,27 @@ class BlipImageProcessor:
         print(f"Question: {self.question}")
         print(f"Answer: {answer}")
         return answer
+    
+
+class VlitImageProcessor:
+    def __init__(self, question: str, image_path: str) -> None:
+        """
+        Initialize the ViltImageProcessor with a question and image path.
+        """
+        self.question = question
+        self.image_path = image_path
+        self.processor = None
+        self.model = None
+
+    def configure(self) -> None:
+        """
+        Configure the Vilt image processor with the given settings.
+        """
+        self.processor = ViltProcessor.from_pretrained("dandelin/vilt-b32-finetuned-vqa")
+        self.model = ViltForQuestionAnswering.from_pretrained("dandelin/vilt-b32-finetuned-vqa")
+
+    def process(self, **kwargs) -> Image.Image:
+        """
+        Process an image and return the processed image.
+        """
+        pass
